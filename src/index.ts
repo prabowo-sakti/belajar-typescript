@@ -1,7 +1,7 @@
 import { TodoCollection } from "./todoCollection";
 import { TodoItem } from "./todoItem";
 
-let todos = [
+let todos: TodoItem[] = [
   new TodoItem(1, "Buy Flowers"),
   new TodoItem(2, "get shoes"),
   new TodoItem(3, "Collect Tickets"),
@@ -13,7 +13,9 @@ let collection: TodoCollection = new TodoCollection("Adam", todos);
 console.clear();
 console.log(`${collection.userName}'s Todo List`);
 
-let newId: number = collection.addTodo("Go for run");
-let todoItem: TodoItem = collection.getTodoById(newId);
-todoItem.printDetails();
+// let newId: number = collection.addTodo("Go for run");
+// let todoItem: TodoItem = collection.getTodoById(newId);
+// todoItem.printDetails();
 // collection.addTodo(todoItem)
+
+collection.getTodoItems(true).forEach((item) => item.printDetails());
