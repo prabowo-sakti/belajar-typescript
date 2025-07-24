@@ -9,5 +9,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.13.1"
+  "type": "module",
+  "packageManager": "pnpm@10.13.1",
+  "dependencies": {
+    "inquirer": "9.1.4"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.8"
+  }
 }
