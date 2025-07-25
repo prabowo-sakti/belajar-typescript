@@ -13,13 +13,13 @@ importers:
         version: 9.1.4
     devDependencies:
       '@types/inquirer':
-        specifier: ^9.0.8
-        version: 9.0.8
+        specifier: ^9.0.3
+        version: 9.0.3
 
 packages:
 
-  '@types/inquirer@9.0.8':
-    resolution: {integrity: sha512-CgPD5kFGWsb8HJ5K7rfWlifao87m4ph8uioU7OTncJevmE/VLIqAAjfQtko578JZg7/f69K4FgqYym3gNr7DeA==}
+  '@types/inquirer@9.0.3':
+    resolution: {integrity: sha512-CzNkWqQftcmk2jaCWdBTf9Sm7xSw4rkI1zpU/Udw3HX5//adEZUIm9STtoRP1qgWj0CWQtJ9UTvqmO2NNjhMJw==}
 
   '@types/node@24.1.0':
     resolution: {integrity: sha512-ut5FthK5moxFKH2T1CUOC6ctR67rQRvvHdFLCD2Ql6KXmMuCrjsSsRI9UsLCm9M18BMwClv4pn327UvB7eeO1w==}
@@ -204,7 +204,7 @@ packages:
 
 snapshots:
 
-  '@types/inquirer@9.0.8':
+  '@types/inquirer@9.0.3':
     dependencies:
       '@types/through': 0.0.33
       rxjs: 7.8.2
