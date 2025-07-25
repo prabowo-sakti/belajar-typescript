@@ -11,12 +11,33 @@ let todos: TodoItem[] = [
 
 let collection: TodoCollection = new TodoCollection("Adam", todos);
 
-function displayTodoList(): void {}
+function displayTodoList(): void {
+  console.log(
+    `${collection.userName}'s Todo List` +
+      `(${collection.getItemCounts().incomplete} items to do)`
+  );
+  collection.getTodoItems(true).forEach((item) => item.printDetails());
+}
 
-console.log(
-  `${collection.userName}'s Todo List` +
-    `(${collection.getItemCounts().incomplete} items to do)`
-);
+enum Commands {
+  Quit = "Quit",
+}
 
-collection.removeComplete();
-collection.getTodoItems(true).forEach((item) => item.printDetails());
+function promptUser(): void {
+  console.clear();
+  displayTodoList();
+  inquirer
+    .prompt({
+      type: "list",
+      name: "command",
+      message: "Choose option",
+      choices: Object.values(Commands),
+    })
+    .then((answers) => {
+      if (answers["command"] !== Commands.Quit) {
+        promptUser();
+      }
+    });
+}
+
+promptUser();
