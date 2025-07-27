@@ -14,7 +14,7 @@ export class TodoCollection {
   }
 
   getTodoById(id: number): TodoItem {
-    return this.todoItems.find((item) => item.id === id);
+    return this.itemMap.get(id);
   }
 
   getTodoItems(includeComplete: boolean): TodoItem[] {

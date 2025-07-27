@@ -29,7 +29,7 @@ enum Commands {
 }
 
 function promptAdd(): void {
-  console.clear;
+  console.clear();
   inquirer
     .prompt({
       type: "input",
@@ -53,7 +53,7 @@ function prompComplete(): void {
       message: "Mark done the tasks",
       choices: collection.getTodoItems(showCompleted).map((item) => ({
         name: item.task,
-        value: item.task,
+        value: item.id,
         checked: item.complete,
       })),
     })
